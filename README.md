@@ -37,12 +37,12 @@ Live Streamlit app: <PASTE YOUR STREAMLIT APP LINK HERE>
 
 | ML Model Name | Observation about model performance |
 |---|---|
-| Logistic Regression | WRITE YOUR OWN OBSERVATION |
-| Decision Tree | WRITE YOUR OWN OBSERVATION |
-| KNN | WRITE YOUR OWN OBSERVATION |
-| Naive Bayes | WRITE YOUR OWN OBSERVATION |
-| Support Vector Machine | WRITE YOUR OWN OBSERVATION |
-| **Overall winner for this dataset** | WRITE YOUR OWN CONCLUSION |
+| Logistic Regression | This Model is Simple and stable baseline. Accuracy is 0.79, with recall 0.89 and F1 0.88, so it finds most of the passing students. AUC (0.62) and MCC (0.15) are low, so it separates pass and fail weakly. It identified only about 5 of the 20 failed students. |
+| Decision Tree | Its Overfits the Training data.Accuracy is 0.77 and F1 is 0.87, but MCC is 0.03, almost no better than random guessing. It caught only about 3 of the 20 failing students |
+| KNN | Recall is high (0.95) and accuracy is 0.82, but AUC (0.58) and MCC (0.07) are very low. It predicts pass for almost everyone and caught only about 2 of the 20 failing students. The many one-hot columns probably make distances less meaningful|
+| Naive Bayes | It has the lowest accuracy (0.63), and its AUC of 0.50 is random level. It catches the most failing students (about 9 of ~20) because it predicts "fail" more often, but it wrongly labels many passing students. The independence assumption is weak because features like Medu/Fedu and Dalc/Walc are correlated |
+| Support Vector Machine | It has the best accuracy (0.83), AUC (0.67), recall (0.95), F1 (0.91) and MCC (0.16). Its precision is slightly below Naive Bayes and Logistic Regression. It caught only about 3 of the 20 failing students, and its accuracy is still below the 0.85 "always pass" baseline |
+| **Overall winner for this dataset** | SVM is the best on most metrics, but only by a small margin. No model is strong, since every MCC is 0.16 or lower. The reasons are the 85/15 class imbalance and the dropped G1/G2 columns, which were the strongest predictors. With only about 20 fail rows in the test set, small gaps like MCC 0.15 vs 0.16 may be just noise. Class weights, threshold tuning or cross-validation could help. |
 
 ## Project structure
 
