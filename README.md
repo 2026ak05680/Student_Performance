@@ -21,7 +21,7 @@ same dataset, compared on six evaluation metrics, and demonstrated in an interac
 
 <PASTE YOUR GITHUB REPO LINK HERE>
 
-Live Streamlit app: <PASTE YOUR STREAMLIT APP LINK HERE>
+Live Streamlit app: <https://studentperformance-35azjh4bxxabjkd8tzftzz.streamlit.app/>
 
 ## d. Models used
 
