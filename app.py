@@ -25,7 +25,6 @@ MODEL_FILES = {
 
 st.set_page_config(page_title="Student Pass/Fail Classifier", page_icon="🎓", layout="wide")
 
-
 @st.cache_resource
 def load_model(name):
     return joblib.load(os.path.join(MODEL_DIR, MODEL_FILES[name]))
@@ -52,6 +51,7 @@ def evaluate(pipe, features, y_true):
 
 # ------------------------------------------------------------------ header
 st.title("🎓 Student Pass / Fail Predictor")
+st.subheader("ML ASSIGNMENT-2.(RAJESH M/2026AK05680)")
 st.caption(
     "UCI Student Performance data (Portuguese course) - five classifiers trained offline; "
     "this app only loads the saved models and scores the test CSV you upload. "
