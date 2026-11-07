@@ -19,7 +19,7 @@ same dataset, compared on six evaluation metrics, and demonstrated in an interac
 
 ## c. GitHub repository link
 
-<PASTE YOUR GITHUB REPO LINK HERE>
+<https://github.com/2026ak05680/Student_Performance/tree/main>
 
 Live Streamlit app: <https://studentperformance-35azjh4bxxabjkd8tzftzz.streamlit.app/>
 
